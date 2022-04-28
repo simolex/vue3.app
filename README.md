@@ -1,9 +1,9 @@
 # vue3-course
 
-## Подписываемся на телеграм 
+## Подписываемся на телеграм
 
 [Telegram канал](https://t.me/ulbi_tv)
 
+https://www.youtube.com/watch?v=XzLuMtDelGk
 
-## Если хочешь поддержать меня 
-[Patreon](https://www.patreon.com/ulbitv)
+13:14
