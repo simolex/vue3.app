@@ -1,4 +1,5 @@
-import UiButton from "./UiButton.vue";
-import UiInput from "./UiInput.vue";
+import UiButton from "./UiButton";
+import UiInput from "./UiInput";
+import UiDialog from "./UiDialog";
 
-export default [UiButton, UiInput];
+export default [UiButton, UiInput, UiDialog];
