@@ -1,19 +1,24 @@
 <template>
   <div class="post-list">
-    <div class="post-list__item" v-for="post in posts">
-      <div><strong>Название: </strong>{{ post.title }}</div>
-      <div><strong>Содержание: </strong>{{ post.content }}</div>
-    </div>
+    <h3 class="post-list__title">Список пользователей</h3>
+    <post-item class="post-list__item" v-for="post in posts" :post="post" />
   </div>
 </template>
 <script>
-export default {};
+import PostItem from "./PostItem.vue";
+export default {
+  components: { PostItem },
+  props: {
+    posts: {
+      type: Array,
+      required: true,
+    },
+  },
+};
 </script>
 <style lang="sass">
 $primary: teal
 .post-list
   &__item
       margin-top: 5px
-      padding: 15px
-      border: 2px solid $primary
 </style>
