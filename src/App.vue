@@ -11,6 +11,8 @@
 <script>
 import PostForm from "@/components/PostForm";
 import PostList from "@/components/PostList";
+import axios from "axios";
+
 export default {
   components: {
     PostForm,
@@ -18,13 +20,7 @@ export default {
   },
   data() {
     return {
-      posts: [
-        { id: 1, title: "Пост 1", content: "Текст поста 1" },
-        { id: 2, title: "Пост 2", content: "Текст поста 2" },
-        { id: 3, title: "Пост 3", content: "Текст поста 3" },
-        { id: 4, title: "Пост 4", content: "Текст поста 4" },
-        { id: 5, title: "Пост 5", content: "Текст поста 5" },
-      ],
+      posts: [],
       dialogVisible: false,
     };
   },
@@ -39,6 +35,23 @@ export default {
     showDialog() {
       this.dialogVisible = true;
     },
+
+    async fetchPosts() {
+      try {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=10");
+        this.posts = response.data.map((post) => ({
+          userId: post.userId,
+          id: post.id,
+          title: post.title,
+          content: post.body,
+        }));
+      } catch (err) {
+        alert("Error");
+      }
+    },
+  },
+  mounted() {
+    this.fetchPosts();
   },
 };
 </script>
