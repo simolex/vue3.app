@@ -1,9 +1,19 @@
 # vue3-course
 
-## Подписываемся на телеграм
+## Project setup
+```
+npm install
+```
 
-[Telegram канал](https://t.me/ulbi_tv)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-https://www.youtube.com/watch?v=XzLuMtDelGk
+### Compiles and minifies for production
+```
+npm run build
+```
 
-13:14
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
