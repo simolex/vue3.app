@@ -5,7 +5,9 @@
       <div><strong>Содержание: </strong>{{ post.content }}</div>
     </div>
     <div class="post-item__buttons">
-      <ui-button class="post-item__btn" @click="$emit('remove', post)">Удалить</ui-button>
+      <ui-button class="post-item__btn" @click="$emit('remove', post)"
+        >Удалить</ui-button
+      >
     </div>
   </div>
 </template>
