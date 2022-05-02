@@ -14,7 +14,7 @@ export default {
 
   align-self: flex-end
   padding: 10px 15px
-  background: none
+  background-color: $secondary
   color: $primary
   border: 1px solid $primary
 </style>

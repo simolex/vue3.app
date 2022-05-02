@@ -1,5 +1,10 @@
 <template>
-  <input class="ui-input" type="text" :value="modelValue" @input="updateInput" />
+  <input
+    class="ui-input"
+    type="text"
+    :value="modelValue"
+    @input="updateInput"
+  />
 </template>
 
 <script>
@@ -18,7 +23,7 @@ export default {
 
 <style lang="sass">
 .ui-input
-  flex-basis:  100%
+  flex-basis: 100%
   border: 1px solid $primary
   padding: 10px 15px
   margin-top: 10px

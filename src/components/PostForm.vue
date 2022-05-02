@@ -1,8 +1,18 @@
 <template>
   <form class="form" @submit.prevent>
     <h4 class="form__title">Создание поста</h4>
-    <ui-input v-model="post.title" class="form__name" type="text" placeholder="Название" />
-    <ui-input v-model="post.content" class="form__content" placeholder="Содержание" />
+    <ui-input
+      v-focus
+      v-model="post.title"
+      class="form__name"
+      type="text"
+      placeholder="Название"
+    />
+    <ui-input
+      v-model="post.content"
+      class="form__content"
+      placeholder="Содержание"
+    />
     <ui-button class="form__button" @click="createPost">Создать</ui-button>
   </form>
 </template>
@@ -29,7 +39,6 @@ export default {
 };
 </script>
 <style lang="sass">
-
 .form
   display: flex
   flex-direction: column

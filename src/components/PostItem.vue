@@ -5,6 +5,11 @@
       <div><strong>Содержание: </strong>{{ post.content }}</div>
     </div>
     <div class="post-item__buttons">
+      <ui-button
+        class="post-item__btn"
+        @click="$router.push(`/posts/${post.id}`)"
+        >Открыть</ui-button
+      >
       <ui-button class="post-item__btn" @click="$emit('remove', post)"
         >Удалить</ui-button
       >
@@ -28,5 +33,9 @@ export default {
   display: flex
   align-items: center
   justify-content: space-between
+  &__buttons
+    display: flex
   &__btn
+    &:not(:last-child)
+      margin-right: 7px
 </style>
