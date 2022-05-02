@@ -8,6 +8,9 @@
       <ui-button class="navbar__btn" @click="$router.push('/store')"
         >Посты (Vuex)</ui-button
       >
+      <ui-button class="navbar__btn" @click="$router.push('/comp-api')"
+        >Посты (CompositionAPI)</ui-button
+      >
       <ui-button class="navbar__btn" @click="$router.push('/about')"
         >О нас</ui-button
       >
